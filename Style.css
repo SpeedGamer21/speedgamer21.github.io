@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    margin: 0;
+    background-color:#273c75;
+    font-family:'Ubuntu', sans-serif;
+}
+
+
+.container {
+    color:#f5f6fa;
+    position: absolute;
+    text-align: center;
+    top: 5%;
+    width: 100%;
+    line-height: 2.0em;
+    margin: 5px auto 7px auto;
+}
+#particle-js {
+    
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+
+
+hr {
+    width: 80%;
+    margin: 18px auto 24px auto;
+    border-color: rgba(255, 255, 255, .8);
+    }
+
+    .circular {
+        width: 250px;
+        height: 250px;
+        border-radius: 150px;
+        -webkit-border-radius: 150px;
+        -moz-border-radius: 150px;
+        background: url(https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.0-9/35422420_2225908967434124_3046716788940210176_n.jpg?_nc_cat=105&_nc_ht=scontent.fmnl4-2.fna&oh=90c2cb1c99a0241d9bed86c9af9faa5b&oe=5C6CC87D) no-repeat top center;
+        background-size: cover;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        }
+
+li {
+    display:inline-block;
+    padding: 5px;
+}
+
+.btn-logo {
+    width: 45px;
+    height: 45px;
+}
+
+footer {
+    font-size: .6em;
+}
