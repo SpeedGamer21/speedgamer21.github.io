@@ -1,165 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aljann Avanzado — Systems Administrator</title>
+    <meta name="description" content="Aljann Avanzado — Systems Administrator focused on virtualization, networking and IT infrastructure.">
+    <meta name="theme-color" content="#0b0d12">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- Apply saved theme before paint to avoid a flash -->
+    <script>
+        try {
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+</head>
+<body>
+    <div class="progress" id="progress"></div>
 
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">aljann<span>.</span></a>
 
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
+            <ul class="nav__list" id="nav-menu">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#experience" class="nav__link">Experience</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
 
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Aljann Avanzado</a>
-                </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
+            <div class="nav__actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <button class="icon-btn nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
                     <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
- 
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Aljann</span><br> Tech Enthusiast</h1>
-
-                    <a href="#" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/aljann-lester-avanzado-7b0451141/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/SpeedGamer21" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-
-                </div>
-
-                <div class="home__img">    
-                    <img src="assets/img/perfil.png" alt="">
-                </div>
-            </section>
-
-
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">Hello! I'am Aljann</h2>
-                        <p class="about__text">I love tech! I write codes and build computers. I'm working on enhancing my skills and make something awesome!</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Skills</h2>
-                        <p class="skills__text">Here are the skills that I obtained for the past 6 years of my tech career.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">60%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">30%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                </button>
             </div>
-            <p>&#169; 2020 copyright all right reserved</p>
-        </footer>
+        </nav>
+    </header>
 
+    <main>
+        <!-- HERO -->
+        <section class="hero container" id="home">
+            <div class="hero__grid" aria-hidden="true"></div>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-    </body>
+            <div class="hero__content reveal">
+                <p class="eyebrow"><span class="dot"></span> San Pablo City, Laguna, PH</p>
+                <h1 class="hero__title">
+                    Hi, I'm <span class="gradient-text">Aljann</span>.<br>
+                    I keep the servers, networks &amp; systems running.
+                </h1>
+                <p class="hero__role">
+                    <span class="hero__prompt">$</span>
+                    <span id="typed">Systems Administrator</span><span class="caret" aria-hidden="true"></span>
+                </p>
+                <div class="hero__cta">
+                    <a href="#experience" class="btn btn--primary">See my experience <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="#contact" class="btn btn--ghost">Get in touch</a>
+                </div>
+                <div class="hero__social">
+                    <a href="https://github.com/SpeedGamer21" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/aljann-lester-avanzado-7b0451141/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="mailto:aljann12@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+                </div>
+            </div>
+
+            <div class="hero__visual reveal">
+                <div class="hero__img">
+                    <img src="assets/img/about.jpg" alt="Portrait of Aljann Avanzado" width="960" height="960">
+                </div>
+                <div class="hero__badge hero__badge--top"><i class='bx bx-server'></i> SysAdmin</div>
+                <div class="hero__badge hero__badge--bottom"><i class='bx bx-cube'></i> Proxmox</div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section container" id="about">
+            <div class="section__head reveal">
+                <span class="section__num">01</span>
+                <h2 class="section__title">About me</h2>
+            </div>
+
+            <div class="about">
+                <div class="about__text reveal">
+                    <p>
+                        I'm a <strong>Systems Administrator</strong> at San Pablo Colleges Medical Center,
+                        where I run the hospital's IT infrastructure: virtualization clusters, Windows and Linux
+                        servers, networks, and the backups that keep it all recoverable.
+                    </p>
+                    <p>
+                        I started out building custom PCs and setting up internet cafés in 2013, moved into
+                        IT support, and now design and maintain the systems behind the scenes. I hold a
+                        <strong>BS in Computer Science</strong> from Laguna College.
+                    </p>
+                </div>
+
+                <ul class="stats">
+                    <li class="stat reveal" style="--d: 0s"><span class="stat__value"><span data-count="13">0</span>+</span><span class="stat__label">Years in IT</span></li>
+                    <li class="stat reveal" style="--d: .1s"><span class="stat__value" data-count="3">0</span><span class="stat__label">Google certificates</span></li>
+                    <li class="stat reveal" style="--d: .2s"><span class="stat__value" id="repo-count">—</span><span class="stat__label">Public repos</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section container" id="experience">
+            <div class="section__head reveal">
+                <span class="section__num">02</span>
+                <h2 class="section__title">Experience</h2>
+            </div>
+
+            <ol class="timeline">
+                <li class="timeline__item reveal">
+                    <span class="timeline__date">Feb 2026 — Present</span>
+                    <h3>Systems Administrator <span>· IT Infrastructure &amp; Systems</span></h3>
+                    <p class="timeline__org">San Pablo Colleges Medical Center</p>
+                    <ul>
+                        <li>Run Proxmox HA clusters, Windows &amp; Linux servers, and Ceph/ZFS storage.</li>
+                        <li>Manage Active Directory, Group Policy, DNS, DHCP, firewalls, switches and VPNs.</li>
+                        <li>Own backup, replication and disaster-recovery testing, plus infrastructure upgrades and migrations.</li>
+                    </ul>
+                </li>
+                <li class="timeline__item reveal">
+                    <span class="timeline__date">Feb 2023 — Mar 2026</span>
+                    <h3>IT Support Staff</h3>
+                    <p class="timeline__org">San Pablo Colleges Medical Center</p>
+                    <ul>
+                        <li>First-level support for hardware, software and network issues across the hospital.</li>
+                        <li>Deployed and maintained workstations, printers and peripherals; managed user accounts and access.</li>
+                    </ul>
+                </li>
+                <li class="timeline__item reveal">
+                    <span class="timeline__date">2013 — 2022</span>
+                    <h3>PC Builder &amp; Proprietor <span>· Freelance</span></h3>
+                    <p class="timeline__org">Speed! Customs and Performance PCs</p>
+                    <ul>
+                        <li>Built custom PCs to client specs and handled on-site hardware and network troubleshooting.</li>
+                        <li>Configured diskless system servers for internet cafés.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section container" id="skills">
+            <div class="section__head reveal">
+                <span class="section__num">03</span>
+                <h2 class="section__title">Skills &amp; tools</h2>
+            </div>
+
+            <div class="skills">
+                <article class="card skill-card reveal" style="--d: 0s">
+                    <i class='bx bx-cube skill-card__icon'></i>
+                    <h3>Virtualization &amp; Storage</h3>
+                    <ul class="tags">
+                        <li>Proxmox VE</li><li>HA Clustering</li><li>Ceph</li><li>ZFS</li><li>Proxmox Backup Server</li><li>TrueNAS Scale</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card reveal" style="--d: .08s">
+                    <i class='bx bxl-windows skill-card__icon'></i>
+                    <h3>Systems Administration</h3>
+                    <ul class="tags">
+                        <li>Windows Server 2019/2022</li><li>Active Directory</li><li>Group Policy</li><li>DNS / DHCP</li><li>Windows LAPS</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card reveal" style="--d: .16s">
+                    <i class='bx bx-network-chart skill-card__icon'></i>
+                    <h3>Networking</h3>
+                    <ul class="tags">
+                        <li>Fortinet FortiGate</li><li>TP-Link Omada</li><li>VLANs</li><li>Network Segmentation</li><li>LACP / NIC Bonding</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card reveal" style="--d: 0s">
+                    <i class='bx bxl-docker skill-card__icon'></i>
+                    <h3>Linux &amp; DevOps</h3>
+                    <ul class="tags">
+                        <li>Ubuntu Server</li><li>Docker &amp; Compose</li><li>Nginx Proxy Manager</li><li>Bash</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card reveal" style="--d: .08s">
+                    <i class='bx bx-plus-medical skill-card__icon'></i>
+                    <h3>Databases &amp; Healthcare IT</h3>
+                    <ul class="tags">
+                        <li>Microsoft SQL Server</li><li>Orthanc PACS</li><li>DICOM</li><li>HIS Support</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card reveal" style="--d: .16s">
+                    <i class='bx bx-terminal skill-card__icon'></i>
+                    <h3>Programming &amp; Monitoring</h3>
+                    <ul class="tags">
+                        <li>C#</li><li>PowerShell</li><li>Grafana</li><li>Prometheus</li><li>Backup &amp; DR</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="certs reveal">
+                <h3 class="certs__title"><i class='bx bx-award'></i> Certificates <span>· Google, via Coursera</span></h3>
+                <ul class="certs__list">
+                    <li><a href="https://coursera.org/verify/JFTSWEHGEHV4" target="_blank" rel="noopener">System Administration &amp; IT Infrastructure Services <i class='bx bx-link-external'></i></a></li>
+                    <li><a href="https://coursera.org/verify/5EJUT6JSYHKY" target="_blank" rel="noopener">The Bits and Bytes of Computer Networking <i class='bx bx-link-external'></i></a></li>
+                    <li><a href="https://coursera.org/verify/U9TLSXJT6LBL" target="_blank" rel="noopener">Technical Support Fundamentals <i class='bx bx-link-external'></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section container" id="projects">
+            <div class="section__head reveal">
+                <span class="section__num">04</span>
+                <h2 class="section__title">Projects</h2>
+                <a href="https://github.com/SpeedGamer21?tab=repositories" target="_blank" rel="noopener" class="section__link">
+                    All repositories <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+
+            <div class="projects" id="projects-grid" aria-live="polite">
+                <!-- Filled from the GitHub API by main.js; skeletons show while loading -->
+                <div class="card project project--skeleton"></div>
+                <div class="card project project--skeleton"></div>
+                <div class="card project project--skeleton"></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section container" id="contact">
+            <div class="contact card reveal">
+                <span class="section__num">05</span>
+                <h2 class="contact__title">Let's work together.</h2>
+                <p class="contact__text">
+                    Open to infrastructure, systems and networking roles. Drop me a line.
+                </p>
+                <div class="hero__cta contact__cta">
+                    <a href="mailto:aljann12@gmail.com" class="btn btn--primary">
+                        <i class='bx bx-envelope'></i> aljann12@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/aljann-lester-avanzado-7b0451141/" target="_blank" rel="noopener" class="btn btn--ghost">
+                        <i class='bx bxl-linkedin'></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p>&copy; <span id="year"></span> Aljann Avanzado</p>
+        <a href="#home" class="footer__top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
