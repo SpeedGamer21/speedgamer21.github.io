@@ -20,12 +20,16 @@ const navMenu = document.getElementById('nav-menu');
 
 function setMenu(open) {
     navMenu.classList.toggle('open', open);
+    header.classList.toggle('menu-open', open);
     navToggle.setAttribute('aria-expanded', open);
     navToggle.querySelector('i').className = open ? 'bx bx-x' : 'bx bx-menu';
 }
 
 navToggle.addEventListener('click', () => setMenu(!navMenu.classList.contains('open')));
 navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('click', e => {
+    if (navMenu.classList.contains('open') && !e.target.closest('#nav-menu, #nav-toggle')) setMenu(false);
+});
 
 /* ===== Theme toggle ===== */
 const themeToggle = document.getElementById('theme-toggle');

@@ -49,7 +49,10 @@
 /* ========== BASE ========== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); overflow-x: clip; }
+
+/* Keep decorative layers (hero grid, glows) from widening the page on phones */
+main { overflow-x: clip; }
 
 body {
     font-family: var(--font);
@@ -525,6 +528,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     }
 
     .nav__list.open { transform: none; }
+    .header.menu-open { background: var(--bg-elev); border-bottom-color: var(--border); }
     .nav__link { display: block; padding: .9rem 0; font-size: 1.05rem; }
     .nav__link::after { display: none; }
 }
@@ -538,6 +542,19 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     .projects { grid-template-columns: 1fr; }
     .contact { padding: 3rem 1.25rem; }
     .btn { width: 100%; justify-content: center; }
+
+    .hero { padding-top: calc(var(--header-h) + 1rem); gap: 2rem; }
+    .hero__title { font-size: clamp(1.75rem, 8.5vw, 2.2rem); }
+    .hero__role { font-size: .9rem; }
+    .eyebrow { font-size: .72rem; }
+    .eyebrow__extra { display: none; }
+
+    .skill-card, .project { padding: 1.25rem; }
+    .skill-card__icon { width: 2.6rem; height: 2.6rem; font-size: 1.35rem; margin-bottom: 1rem; }
+    .project { min-height: 0; }
+    .stat { padding: 1rem 1.25rem; }
+    .certs { padding: 1.25rem; }
+    .contact__title { font-size: 1.9rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
